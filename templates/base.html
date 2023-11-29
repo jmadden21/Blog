@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{% block title %} My Blog {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1> Welcome to my blog</h1>
+    <nav>
+        <! -- Navigation goes here -->
+    </nav>
+</header>
+<manin>
+    {% block content %}
+        <! -- Content goes here -->
+    {% endblock %}
+</manin>
+
+<footer>
+    <p>Created by Jack </p>
+
+</body>
+</html>
