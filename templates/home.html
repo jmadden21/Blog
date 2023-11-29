@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
-{% block tile %}Home - My Blog{% endblock %}
+{% block title %}Home - My Blog{% endblock %}
 
 {% block content %}
-    <p> This is the home page.</p>
-    <!- Additional content goes here -->
+    {% for post in posts %}
+        <article>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+        </article>
+    {% endfor %}
 {% endblock %}
