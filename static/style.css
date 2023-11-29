@@ -17,3 +17,50 @@ main {
     margin: auto;
     max-width: 800px;
 }
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+
+nav a:hover {
+    color: #cccccc;
+}
+
+.create-post-form {
+    text-align: center;
+    margin: auto;
+    max-width: 500px;
+}
+
+.create-post-form input[type="text"],
+.create-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.create-post-form textarea {
+    height: 200px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.content-container {
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+}
+
+
+.content-container h2 {
+    margin-bottom: 20px;
+}
+
+
