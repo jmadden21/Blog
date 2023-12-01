@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Preview Post - My Blog{% endblock %}
+
+{% block content %}
+    <div class="post-preview">
+        <h2>Preview of Your Post</h2>
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.content }}</p>
+        <form method="post" action="{{ url_for('preview_post') }}">
+            <input type="submit" value="Confirm Post">
+        </form>
+        <a href="{{ url_for('create_post') }}">Edit Post</a>
+    </div>
+{% endblock %}

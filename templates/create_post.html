@@ -6,17 +6,26 @@
     <div class="create-post-form">
         <h2>Create a New Post</h2>
         <form method="post" action="{{ url_for('create_post') }}">
-            <div class="form-group">
+            <div>
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" required>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="content">Content:</label>
                 <textarea id="content" name="content" required></textarea>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create Post">
+            <div>
+                <input type="submit" value="Preview Post">
             </div>
         </form>
     </div>
+
+    <!-- Section to display all posts -->
+    {% for post in posts %}
+        <div class="post-preview">
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.content }}</p>
+            <a href="{{ url_for('delete_post', post_id=post.id) }}">Delete Post</a>
+        </div>
+    {% endfor %}
 {% endblock %}
